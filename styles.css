@@ -1,5 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(images/stocks.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 5rem;
+}
+
 label
 {
     display: block;
     padding-bottom: 1rem;
+}
+
+
+h1
+{
+    text-align: center;
+}
+
+#initial-price, #stocks-quantity, #current-price
+{
+    margin: 1rem 40rem;
+    width: 15%;
+}
+
+#submit-btn
+{
+    margin: 1rem 43rem;
+}
+
+#output-box
+{
+    margin: 1rem 35rem;
+}
+
+body .sadTheme
+{
+    background-image: url(images/stonksdown.jpg);
+}
+
+body .happytheme
+{
+    background-image: url(images/stonksup.jpg);
+}
+
+.transperantBg{
+    background-image: url("");
 }
