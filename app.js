@@ -5,9 +5,9 @@ var submitBtn = document.querySelector('#submit-btn');
 var outputBox = document.querySelector('#output-box');
 
 function submitHandler() {
-    var ip = initialPrice.value;
-    var qty = noOfStocks.value;
-    var curr = currentPrice.value;
+    var ip = Number(initialPrice.value);
+    var qty = Number(noOfStocks.value);
+    var curr = Number(currentPrice.value);
 
     calculateProfitAndLoss(ip, qty, curr);
 }
@@ -23,7 +23,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
             var lossPercentage = ((loss / initial)* 100).toFixed(2);
             // var l = loss.toFixed(2);
             // var los = lossPercentage.toFixed(2);
-
+           
             showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage}%`)
             if(lossPercentage>50)
             document.body.style.backgroundImage = "URL('images/stonksdown.jpg')"
@@ -35,10 +35,10 @@ function calculateProfitAndLoss(initial, quantity, current) {
         } else if (current > initial) {
             var profit = (current - initial) * quantity;
             var profitPercentage = (profit / initial) * 100;
-            var p = profit.toFixed(2);
-            var pro = profitPercentage.toFixed(2);
+                // var p = profit.toFixed(2);
+                // var pro = profitPercentage.toFixed(2);
             
-            showOutput(`The profit is ${p} and the profit percentage is ${pro}% !`)
+            showOutput(`The profit is ${profit} and the profit percentage is ${profitPercentage}% !`)
             document.body.style.backgroundImage = "URL('images/stonksup.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "cover";
