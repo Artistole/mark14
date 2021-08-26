@@ -35,10 +35,10 @@ function calculateProfitAndLoss(initial, quantity, current) {
         } else if (current > initial) {
             var profit = (current - initial) * quantity;
             var profitPercentage = (profit / initial) * 100;
-                // var p = profit.toFixed(2);
-                // var pro = profitPercentage.toFixed(2);
+                var p = profit.toFixed(2);
+                var pro = profitPercentage.toFixed(2);
             
-            showOutput(`The profit is ${profit} and the profit percentage is ${profitPercentage}% !`)
+            showOutput(`The profit is ${p} and the profit percentage is ${pro}% !`)
             document.body.style.backgroundImage = "URL('images/stonksup.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "cover";
