@@ -9,6 +9,8 @@ body
     background-position-x: 5rem;
 }
 
+
+
 label
 {
     display: block;
@@ -37,7 +39,7 @@ h1
     margin: 1rem 35rem;
 }
 
-body .sadTheme
+/* body .sadTheme
 {
     background-image: url(images/stonksdown.jpg);
 }
@@ -49,4 +51,9 @@ body .happytheme
 
 .transperantBg{
     background-image: url("");
+} */
+
+#happy{
+    /* background-image: url(images/stonksup.jpg); */
+    display: none;
 }

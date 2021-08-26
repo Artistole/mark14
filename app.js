@@ -3,6 +3,7 @@ var noOfStocks = document.querySelector('#stocks-quantity');
 var currentPrice = document.querySelector('#current-price');
 var submitBtn = document.querySelector('#submit-btn');
 var outputBox = document.querySelector('#output-box');
+var happy1 = document.querySelector('#happy');
 
 function submitHandler() {
     var ip = initialPrice.value;
@@ -50,6 +51,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
             //     cols[1].classList.add("transperantBg");
             //     contentDiv.classList.add("happyTheme");
             //     }
+            happy1.style.display = "block";
         } else if (current = initial) {
             showOutput("No loss")
         }
