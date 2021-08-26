@@ -3,10 +3,10 @@
 body
 {
     font-family: 'Roboto', sans-serif;
-    background-image: url(images/stocks.svg);
+    /* background-image: url(images/stocks.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 5rem;
+    background-position-x: 5rem; */
 }
 
 
@@ -25,35 +25,52 @@ h1
 
 #initial-price, #stocks-quantity, #current-price
 {
-    margin: 1rem 40rem;
-    width: 15%;
+    /* margin: 1rem 40rem;
+    width: 15%; */
+
+    width: 45%;
+    margin-bottom: 2rem;
+    margin-left: 12rem;
+    height: 25px;
+    display: block;
+    background-color: white;
+    border-radius: 20px;
+    font-size: large;
 }
 
 #submit-btn
 {
-    margin: 1rem 43rem;
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-left: 15rem;
+    height: 25px;
+    display: block;
+    font-size: large;
 }
 
 #output-box
 {
-    margin: 1rem 35rem;
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-left: 15rem;
+    height: 25px;
+    display: block;
+    font-size: large;
+    font-weight: bold;
 }
 
-/* body .sadTheme
+
+.section
 {
-    background-image: url(images/stonksdown.jpg);
-}
-
-body .happytheme
-{
-    background-image: url(images/stonksup.jpg);
-}
-
-.transperantBg{
-    background-image: url("");
-} */
-
-#happy{
-    /* background-image: url(images/stonksup.jpg); */
-    display: none;
+    width: 100%;
+    max-width: 700px;
+    min-height: 200px;
+    margin: 7rem 25rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #F87171;
+    display: block;
+    border-radius: 20px;
+    border: none;
+    background-image: url(images/stocks.svg);
 }
