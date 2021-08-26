@@ -45,8 +45,8 @@ function calculateProfitAndLoss(initial, quantity, current) {
             document.body.style.backgroundPositionX ="0rem";
             document.body.style.backgroundPositionY = "0rem";
         } else if (current = initial) {
-            showOutput("No loss")
-            document.body.style.backgroundColor = "#ffffff"
+            showOutput("No loss, No gain")
+            document.body.style.backgroundColor = "#ffffff";
         }
     } else {
         showOutput("please fill all the fields")
