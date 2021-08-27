@@ -20,35 +20,46 @@ function calculateProfitAndLoss(initial, quantity, current) {
     {
         if (initial > current) {
             var loss = ((initial - current) * quantity).toFixed(2);
-            var lossPercentage = ((loss / initial)* 100).toFixed(2);
+            var lossPercentage = (((initial-current)*100)/initial).toFixed(2);
+            // var lossPercentage = ((loss / initial)* 100).toFixed(2);
             // var l = loss.toFixed(2);
             // var los = lossPercentage.toFixed(2);
-           
-            showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage}%`)
-            if(lossPercentage>50)
+           if(lossPercentage<50)
+           {
+            showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage}%`);
+            document.body.style.backgroundImage = "none";
+           }
+           else if(lossPercentage>50){
+           showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage}%`)
             document.body.style.backgroundImage = "URL('images/stonksdown.jpg')"
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPositionX ="0rem";
             document.body.style.backgroundPositionY = "0rem";
-        
+           }
+            
 
         } else if (current > initial) {
             var profit = (current - initial) * quantity;
-            var profitPercentage = (profit / initial) * 100;
+            var profitPercentage = (((current-initial) * 100)/initial);
+            // var profitPercentage = (profit / initial) * 100;
                 var p = profit.toFixed(2);
                 var pro = profitPercentage.toFixed(2);
-            
+            if(pro<50){
             showOutput(`The profit is ${p} and the profit percentage is ${pro}% !`)
-            if(pro>50)
+            document.body.style.backgroundImage = "none";
+            }
+            else if(pro>=50){
+            showOutput(`The profit is ${p} and the profit percentage is ${pro}% !`)
             document.body.style.backgroundImage = "URL('images/stonksup.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPositionX ="0rem";
             document.body.style.backgroundPositionY = "0rem";
+            }
         } else if (current = initial) {
             showOutput("No loss, No gain")
-            document.body.style.backgroundColor = "#ffffff";
+            document.body.style.backgroundImage = "none";
         }
     } else {
         showOutput("please fill all the fields")
